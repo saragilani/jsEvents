@@ -24,8 +24,6 @@ const handleToDoListForm = (event) => {
 
 toDoListForm.addEventListener('submit', handleToDoListForm);
 
-
-
 // //deleting something 
 
 const deleteFunction = (itemToDelete) => {
@@ -34,6 +32,18 @@ const deleteFunction = (itemToDelete) => {
     toDoList.removeChild(itemToDelete);
 }
 
+// Showing current date and time.
+const dateButton = document.querySelector('#date-button');
+
+const showDate = (event) => {
+    event.preventDefault();
+    const textDate = document.createElement('h4'); 
+    const nodeV = document.createTextNode(Date());
+    textDate.appendChild(nodeV);
+    document.body.appendChild(textDate);
 
 
+}
+
+dateButton.addEventListener('click', showDate);
 
